@@ -717,7 +717,7 @@ impl<'a> BytesText<'a> {
     /// be escaped.
     #[inline]
     pub fn new(content: &'a str) -> Self {
-        Self::from_escaped(escape(content))
+        Self::from_escaped(partial_escape(content))
     }
 
     /// Ensures that all data is owned to extend the object's lifetime if
